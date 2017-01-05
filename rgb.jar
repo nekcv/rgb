@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Arrays;
+import java.util.Collections;
+ 
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+public static void main(String[] args) {
+		Integer[] R = {51,102,153,204,51,153,102,204,255};
+		Integer[] G = {102,153,51,102,204,255,51,102,255};
+		Integer[] B = {153,51,102,51,153,51,102,153,255};
+		Arrays.sort(R);
+		Arrays.sort(B,Collections.reverseOrder());
+		for(int i=0;i<9;i++){
+			if(i%2!=0){
+				G[i]=G[i+1];
+				}
+			}
+		for(int i=0;i<9;i++){
+			System.out.println(R[i]+" "+G[i]+" "+B[i]);
+		}
+}
+}
